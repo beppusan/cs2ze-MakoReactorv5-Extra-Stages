@@ -1295,6 +1295,7 @@
       }
     },
     // Check if special lasers mode is enabled & add optional input to enforce laser dodging at the ending
+    // Also set sephiroth's animation as "idle" so he doesn't do the weird pose at the start in every situation
     {
       "match": {
         "classname": "logic_relay",
@@ -1302,6 +1303,12 @@
       },
       "insert": {
         "io": [
+          {
+            "outputname": "OnTrigger",
+            "targetname": "[PR#]seph_modelo2_ex",
+            "inputname": "SetAnimation",
+            "overrideparam": "idle"
+          },
           {
             "outputname": "OnTrigger",
             "targetname": "LASER_TYPES_COUNTER",
@@ -1476,6 +1483,13 @@
             "outputname": "OnUser2",
             "targetname": "!self",
             "inputname": "AddOutput",
+            "overrideparam": "OnFullyOpen>[PR#]seth_seph_case>PickRandom>>3>1",
+            "timestofire": 1
+          },
+          {
+            "outputname": "OnUser2",
+            "targetname": "!self",
+            "inputname": "AddOutput",
             "overrideparam": "OnFullyOpen>[PR#]ss_seeyou>PlaySound>>3>1",
             "timestofire": 1
           },
@@ -1483,7 +1497,7 @@
             "outputname": "OnUser2",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnFullyOpen>[PR#]seph_modelo2_ex>TurnOff>>4>1",
+            "overrideparam": "OnFullyOpen>[PR#]seph_modelo2_ex>TurnOff>>4.85>1",
             "timestofire": 1
           },
           {
@@ -1546,6 +1560,13 @@
             "outputname": "OnUser3",
             "targetname": "!self",
             "inputname": "AddOutput",
+            "overrideparam": "OnFullyOpen>[PR#]seth_seph_case>PickRandom>>2>1",
+            "timestofire": 1
+          },
+          {
+            "outputname": "OnUser3",
+            "targetname": "!self",
+            "inputname": "AddOutput",
             "overrideparam": "OnFullyOpen>[PR#]espad>PlaySound>>3>1",
             "timestofire": 1
           },
@@ -1554,6 +1575,13 @@
             "targetname": "!self",
             "inputname": "AddOutput",
             "overrideparam": "OnFullyOpen>WESTERSAND_LASER_TEMP>ForceSpawn>>3>1",
+            "timestofire": 1
+          },
+          {
+            "outputname": "OnUser3",
+            "targetname": "!self",
+            "inputname": "AddOutput",
+            "overrideparam": "OnFullyOpen>[PR#]seth_seph_case>PickRandom>>3>1",
             "timestofire": 1
           },
           {
@@ -1574,6 +1602,13 @@
             "outputname": "OnUser3",
             "targetname": "!self",
             "inputname": "AddOutput",
+            "overrideparam": "OnFullyOpen>[PR#]seth_seph_case>PickRandom>>4>1",
+            "timestofire": 1
+          },
+          {
+            "outputname": "OnUser3",
+            "targetname": "!self",
+            "inputname": "AddOutput",
             "overrideparam": "OnFullyOpen>[PR#]espad>PlaySound>>5>1",
             "timestofire": 1
           },
@@ -1588,14 +1623,7 @@
             "outputname": "OnUser3",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnFullyOpen>[PR#]seph_modelo2_ex>SetAnimation>seph_death>5>1",
-            "timestofire": 1
-          },
-          {
-            "outputname": "OnUser3",
-            "targetname": "!self",
-            "inputname": "AddOutput",
-            "overrideparam": "OnFullyOpen>[PR#]seph_modelo2_ex>SetDefaultAnimation>sephi_desaparecer>5>1",
+            "overrideparam": "OnFullyOpen>[PR#]seth_seph_case>PickRandom>>5>1",
             "timestofire": 1
           },
           {
@@ -1610,6 +1638,13 @@
             "targetname": "!self",
             "inputname": "AddOutput",
             "overrideparam": "OnFullyOpen>[PR#]ss_seeyou>PlaySound>>5.6>1",
+            "timestofire": 1
+          },
+          {
+            "outputname": "OnUser3",
+            "targetname": "!self",
+            "inputname": "AddOutput",
+            "overrideparam": "OnFullyOpen>[PR#]seph_modelo2_ex>SetAnimation>seph_death>5.6>1",
             "timestofire": 1
           },
           {
@@ -3443,6 +3478,11 @@
           "outputname": "OnTimer",
           "targetname": "SPECIAL_LASER_TEMP",
           "inputname": "ForceSpawn"
+        },
+        {
+          "outputname": "OnTimer",
+          "targetname": "[PR#]seth_seph_case",
+          "inputname": "PickRandom"
         }
       ]
     },
@@ -4034,7 +4074,7 @@
           "outputname": "OnStartTouch",
           "targetname": "!self",
           "inputname": "FireUser1",
-          "delay": 4,
+          "delay": 2.85,
           "timestofire": 1
         },
         {
@@ -4383,6 +4423,12 @@
           "outputname": "OnTrigger",
           "targetname": "sephiex3_sp1_hurt*",
           "inputname": "Enable"
+        },
+        {
+          "outputname": "OnTrigger",
+          "targetname": "[PR#]seph_modelo2_ex2",
+          "inputname": "SetAnimation",
+          "overrideparam": "attack7"
         }
       ]
     },
@@ -4571,6 +4617,12 @@
           "outputname": "OnTrigger",
           "targetname": "sephiex3_sp2_hurt",
           "inputname": "Enable"
+        },
+        {
+          "outputname": "OnTrigger",
+          "targetname": "[PR#]seph_modelo2_ex2",
+          "inputname": "SetAnimation",
+          "overrideparam": "attack7"
         }
       ]
     },
@@ -5157,6 +5209,11 @@
           "outputname": "OnTimer",
           "targetname": "SPECIAL_LASER_TEMP",
           "inputname": "ForceSpawn"
+        },
+        {
+          "outputname": "OnTimer",
+          "targetname": "[PR#]seth_seph_case",
+          "inputname": "PickRandom"
         },
         {
           "outputname": "OnTimer",
@@ -9424,6 +9481,11 @@
           "outputname": "OnTimer",
           "targetname": "WESTERSAND_LASER_TEMP",
           "inputname": "ForceSpawn"
+        },
+        {
+          "outputname": "OnTimer",
+          "targetname": "[PR#]seth_seph_case",
+          "inputname": "PickRandom"
         }
       ]
     },
@@ -9984,14 +10046,7 @@
           "outputname": "OnUser1",
           "targetname": "[PR#]extreme2_trigger12",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]bahamut>Color>0 0 255>0>-1",
-          "timestofire": 1
-        },
-        {
-          "outputname": "OnUser1",
-          "targetname": "[PR#]extreme2_trigger12",
-          "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]bahamut>Skin>0>0.1>-1",
+          "overrideparam": "OnTrigger>[PR#]bahamut>Color>0 0 255>0.1>-1",
           "timestofire": 1
         },
         {
@@ -10032,14 +10087,7 @@
           "outputname": "OnUser2",
           "targetname": "[PR#]extreme2_trigger12",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]bahamut>Color>0 255 0>0>-1",
-          "timestofire": 1
-        },
-        {
-          "outputname": "OnUser2",
-          "targetname": "[PR#]extreme2_trigger12",
-          "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]bahamut>Skin>0>0.1>-1",
+          "overrideparam": "OnTrigger>[PR#]bahamut>Color>0 255 0>0.1>-1",
           "timestofire": 1
         },
         {
@@ -10492,13 +10540,6 @@
           "targetname": "!self",
           "inputname": "AddOutput",
           "overrideparam": "OnTrigger>[PR#]seph_modelo2_ex>SetAnimation>espadazos>0>1",
-          "timestofire": 1
-        },
-        {
-          "outputname": "OnUser4",
-          "targetname": "!self",
-          "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]seph_modelo2_ex>SetDefaultAnimation>espadazos>0>1",
           "timestofire": 1
         },
         {
@@ -11282,6 +11323,12 @@
           "outputname": "OnUser1",
           "targetname": "sephiex4_case1_hurt*",
           "inputname": "Enable"
+        },
+        {
+          "outputname": "OnUser1",
+          "targetname": "[PR#]seph_modelo2_ex2",
+          "inputname": "SetAnimation",
+          "overrideparam": "attack7"
         }
       ]
     },
@@ -11397,7 +11444,7 @@
           "outputname": "OnTrigger",
           "targetname": "[PR#]seph_modelo2_ex2",
           "inputname": "TurnOff",
-          "delay": 5
+          "delay": 5.85
         }
       ]
     },
