@@ -1842,6 +1842,7 @@
       }
     },
     // Allow paths to be spawned for defending and laser traps to be happened during the boss fight
+    // Path-spawn triggers kill the human-only trigger_push, allowing humans to escape cage
     {
       "match": {
         "classname": "logic_relay",
@@ -1849,6 +1850,13 @@
       },
       "insert": {
         "io": [
+          {
+            "outputname": "OnUser1",
+            "targetname": "!self",
+            "inputname": "AddOutput",
+            "overrideparam": "OnTrigger>baha_cage_push>Kill>>0>1",
+            "timestofire": 1
+          },
           {
             "outputname": "OnUser1",
             "targetname": "!self",
@@ -2480,6 +2488,25 @@
       "replace": {
         "spawnflags": "0",
         "targetname": "ZM_SEPHIROTH_LASERTEMP"
+      }
+    },
+    // Add a name to the nameless entities for convenience
+    {
+      "match": {
+        "classname": "trigger_push",
+        "hammeruniqueid": "1858"
+      },
+      "replace": {
+        "targetname": "baha_cage_push"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_push",
+        "hammeruniqueid": "1860"
+      },
+      "replace": {
+        "targetname": "baha_cage_push"
       }
     }
   ],
@@ -5614,7 +5641,7 @@
       "angles": "0 90 0",
       "model": "models/props/de_train/processor.vmdl"
     },
-    // Add laser triggered after entering the banker
+    // Add laser triggered after entering the bunker
     {
       "classname": "trigger_once",
       "targetname": "trigger_e3_extreme",
@@ -5626,35 +5653,41 @@
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]seph_modelox1",
-          "inputname": "Enable"
+          "inputname": "Enable",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]ss_seeyou",
-          "inputname": "PlaySound"
+          "inputname": "PlaySound",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]corte2",
-          "inputname": "PickRandom"
+          "inputname": "PickRandom",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]sephiroth_c",
           "inputname": "StartForward",
-          "delay": 3
+          "delay": 3,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]espad",
           "inputname": "PlaySound",
-          "delay": 3
+          "delay": 3,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]cortefatal",
           "inputname": "Break",
-          "delay": 3.2
+          "delay": 3.2,
+          "timestofire": 1
         }
       ]
     },
@@ -10364,56 +10397,56 @@
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]magia_cura_button>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]magia_cura_button>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]hielo_f_button>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]hielo_f_button>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]rayo_bot>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]rayo_bot>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]magia_viento_button>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]magia_viento_button>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]magia_tierra_button>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]magia_tierra_button>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]1b>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]1b>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]boton_ultima>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]boton_ultima>Kill>>38>1",
           "timestofire": 1
         },
         {
           "outputname": "OnUser3",
           "targetname": "!self",
           "inputname": "AddOutput",
-          "overrideparam": "OnTrigger>[PR#]magia_gravedad_button>Lock>>38>1",
+          "overrideparam": "OnTrigger>[PR#]magia_gravedad_button>Kill>>38>1",
           "timestofire": 1
         },
         {
@@ -12693,47 +12726,55 @@
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]seph_modelox1",
-          "inputname": "Enable"
+          "inputname": "Enable",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]ss_seeyou",
-          "inputname": "PlaySound"
+          "inputname": "PlaySound",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]corte2",
-          "inputname": "PickRandom"
+          "inputname": "PickRandom",
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "sephiex4_case10_move",
           "inputname": "FireUser1",
-          "delay": 2.5
+          "delay": 2.5,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]sephiroth_c",
           "inputname": "StartForward",
-          "delay": 3.4
+          "delay": 3.4,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]espad",
           "inputname": "PlaySound",
-          "delay": 3.4
+          "delay": 3.4,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "[PR#]cortefatal",
           "inputname": "Break",
-          "delay": 3.6
+          "delay": 3.6,
+          "timestofire": 1
         },
         {
           "outputname": "OnStartTouch",
           "targetname": "sephiex4_case11_move",
           "inputname": "FireUser1",
-          "delay": 4.5
+          "delay": 4.5,
+          "timestofire": 1
         }
       ]
     },

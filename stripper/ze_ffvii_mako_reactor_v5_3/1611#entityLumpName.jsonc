@@ -12,35 +12,35 @@
             "outputname": "OnUser1",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BANKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
+            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BUNKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
             "timestofire": 1
           },
           {
             "outputname": "OnUser1",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BANKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
+            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BUNKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
             "timestofire": 1
           },
           {
             "outputname": "OnUser1",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BANKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
+            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BUNKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
             "timestofire": 1
           },
           {
             "outputname": "OnUser1",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BANKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
+            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BUNKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
             "timestofire": 1
           },
           {
             "outputname": "OnUser1",
             "targetname": "!self",
             "inputname": "AddOutput",
-            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BANKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
+            "overrideparam": "OnBreak>[PR#]consola>Command>say ** OH NO! BUNKER IS CLOSED! GO LEFT SIDE!! **>1>-1",
             "timestofire": 1
           }
         ]
