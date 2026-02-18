@@ -9244,7 +9244,7 @@
     {
       "classname": "func_movelinear",
       "targetname": "ascensorex3_move",
-      "movedistance": "3500",
+      "movedistance": "3000",
       "speed": "1120",
       "spawnflags": "8",
       "movedir": "0 270 0",
