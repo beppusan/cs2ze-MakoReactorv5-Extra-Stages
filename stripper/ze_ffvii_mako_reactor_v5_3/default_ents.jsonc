@@ -8777,6 +8777,12 @@
         },
         {
           "outputname": "OnTrigger",
+          "targetname": "[PR#]cloud",
+          "inputname": "Kill",
+          "timestofire": 1
+        },
+        {
+          "outputname": "OnTrigger",
           "targetname": "[PR#]dificil_props",
           "inputname": "Kill",
           "timestofire": 1
