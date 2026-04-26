@@ -1,6 +1,6 @@
 {
-  // Fix the position of entities associated with the weapon after AG2 updates
   "modify": [
+    // Fix the position of entities associated with the weapon after AG2 updates
     {
       "match": {
         "classname": "func_button",
