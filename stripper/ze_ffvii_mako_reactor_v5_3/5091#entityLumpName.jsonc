@@ -1,0 +1,77 @@
+{
+  "modify": [
+    // Fix the position of entities associated with the weapon after AG2 updates
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]fuego_f"
+      },
+      "replace": {
+        "origin": "39.750000 -0.459961 3.429932"
+      }
+    },
+    {
+      "match": {
+        "classname": "func_button",
+        "targetname": "[PR#]1b"
+      },
+      "replace": {
+        "origin": "38.000000 2.160034 3.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]fuego_p1"
+      },
+      "replace": {
+        "origin": "69.000000 -1.319946 -17.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]fuego_p2"
+      },
+      "replace": {
+        "origin": "107.750000 -1.279907 -20.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "ambient_generic",
+        "targetname": "[PR#]sonidofire1"
+      },
+      "replace": {
+        "origin": "84.549805 -37.929932 -37.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]fuego_a1"
+      },
+      "replace": {
+        "origin": "260.750000 -24.489990 7.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]fuego_a2"
+      },
+      "replace": {
+        "origin": "258.750000 9.680054 3.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]fuego_a3"
+      },
+      "replace": {
+        "origin": "23.719727 4.680054 22.000000"
+      }
+    }
+  ]
+}

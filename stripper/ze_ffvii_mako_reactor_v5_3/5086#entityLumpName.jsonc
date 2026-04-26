@@ -1,0 +1,104 @@
+{
+  // Fix the position of entities associated with the weapon after AG2 updates
+  "modify": [
+    {
+      "match": {
+        "classname": "func_button",
+        "targetname": "[PR#]magia_cura_button"
+      },
+      "replace": {
+        "origin": "26.129883 -0.317001 5.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]cura_f"
+      },
+      "replace": {
+        "origin": "37.149902 -1.320007 -8.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]cura2_f"
+      },
+      "replace": {
+        "origin": "39.169922 -0.460007 3.429932"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]cura_f2"
+      },
+      "replace": {
+        "origin": "37.629883 -1.320007 -8.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]curacion"
+      },
+      "replace": {
+        "origin": "9.140137 -1.317001 19.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_hurt",
+        "targetname": "[PR#]curacion3"
+      },
+      "replace": {
+        "origin": "9.629883 -3.397003 19.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "trigger_multiple",
+        "targetname": "[PR#]curacion2"
+      },
+      "replace": {
+        "origin": "9.629883 -3.397003 19.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "info_particle_system",
+        "targetname": "[PR#]cura_f3"
+      },
+      "replace": {
+        "origin": "37.629883 -1.320007 -8.000000"
+      }
+    },
+    {
+      "match": {
+        "classname": "point_teleport",
+        "targetname": "[PR#]magia_cura_tp_1"
+      },
+      "replace": {
+        "origin": "2.245117 -0.183319 -32.743164"
+      }
+    },
+    {
+      "match": {
+        "classname": "point_teleport",
+        "targetname": "[PR#]magia_cura_tp_2"
+      },
+      "replace": {
+        "origin": "2.614258 -0.183319 -32.743164"
+      }
+    },
+    {
+      "match": {
+        "classname": "point_teleport",
+        "targetname": "[PR#]magia_cura_tp_3"
+      },
+      "replace": {
+        "origin": "3.192383 -0.183319 -32.743164"
+      }
+    }
+  ]
+}

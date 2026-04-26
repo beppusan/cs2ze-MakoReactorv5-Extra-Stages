@@ -1,0 +1,36 @@
+{
+  "modify": [
+    // Fix the position of entities associated with the weapon after AG2 updates
+    {
+      "modify": [
+        {
+          "match": {
+            "classname": "func_button",
+            "targetname": "[PR#]magia_gravedad_button"
+          },
+          "replace": {
+            "origin": "37.000000 -0.320068 4.000000"
+          }
+        },
+        {
+          "match": {
+            "classname": "info_particle_system",
+            "targetname": "[PR#]gravedad_f"
+          },
+          "replace": {
+            "origin": "39.790039 -0.460083 3.430054"
+          }
+        },
+        {
+          "match": {
+            "classname": "info_teleport_destination",
+            "targetname": "[PR#]crear_gravedad1"
+          },
+          "replace": {
+            "origin": "267.540039 -1.070068 90.000000"
+          }
+        }
+      ]
+    }
+  ]
+}
